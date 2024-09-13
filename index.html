@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../powerPredict/static/css/style.css" />
+  </head>
+  <body>
+    <header><h1>龙源风电功率预测</h1></header>
+
+    <section class="mainbox">
+      <!-- 左边布局 -->
+      <div class="column">
+        <div class="panel">
+          <h2>实际</h2>
+          <div id="chartContainer" class="chart-power"></div>
+        </div>
+
+        <div class="panel">
+          <h2>各项天气因素对功率预测准确度的影响</h2>
+          <div id="pieContainer" class="chart-power"></div>
+        </div>
+      </div>
+      <!-- 中间布局 -->
+      <div class="column">
+        <div class="no">
+          <!-- 文件上传表单 -->
+          <strong style="color: #f0f0f0">上传文件</strong>
+          <input
+            type="file"
+            id="csvFile"
+            accept=".csv"
+            class="custom-file-input"
+          />
+          <input type="text" class="custom-file-input" placeholder="起始时间" />
+          <input type="text" class="custom-file-input" placeholder="结束时间" />
+          <button onclick="submitTimeRange()" class="custom-file-input">
+            提交
+          </button>
+          <!-- <button style="display: none" id="furtherBtn">一键清除选中</button> -->
+        </div>
+        <!-- 柱状图显示区域 -->
+        <div id="tableContainer" class="table"></div>
+      </div>
+      <!-- 右边布局 -->
+      <div class="column">
+        <div class="column-container">
+          <h2>各项天气因素概览</h2>
+          <div id="columnContainer" class="weather"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="../static/js/flexible.js"></script>
+  <script src="../static/js/jquery-3.7.0.js"></script>
+  <script src="../static/js/echarts.min.js"></script>
+  <script src="../static/js/jquery.csv.min.js"></script>
+  <script src="../static/js/table.js"></script>
+</html>

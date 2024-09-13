@@ -1,0 +1,138 @@
+/* 表格样式 */
+table {
+    width: 100%; /* 表格宽度占满容器 */
+    table-layout: fixed; /* 固定表格布局 */
+    max-width: 100%; /* 最大宽度为容器的宽度 */
+}
+/* 表头样式 */
+th {
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 200px;
+}
+
+/* 行样式 */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+/* 单元格样式 */
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+/* 选中样式 */
+.selected {
+    color: chocolate;
+}
+
+/* ---------------------------------分界线------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/background.jpg);
+    line-height: 1.15;
+}
+
+header {
+    height: 1.25rem;
+    background: url(../images/head_bg.png);
+    background-size: 100% 100%;
+}
+
+header h1 {
+    font-size: .475rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.mainbox {
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0.125rem 0.125rem 0;
+}
+
+.mainbox .column {
+    flex: 3;
+    &:nth-child(2){
+        flex: 5;
+        margin: 0 .125rem .1875rem;
+    }
+}
+
+.mainbox .panel {
+    height: 5.5rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url(../images/line.png) rgba(255, 255, 255, 0.04);
+    padding: .1875rem .1875rem;
+    margin-bottom: .1875rem;
+}   
+
+.mainbox h2 {
+    height: .6rem;
+    color: #fff;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.25rem;
+    font-weight: 400;
+}
+
+.chart-power {
+    height: 4.5rem;
+}
+
+.mainbox .no {
+    background-color: rgba(101, 132, 226, 0.1);
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    padding: .1875rem;
+}
+
+.mainbox .table {
+    height: 10.125rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    overflow: auto; /* 添加滚动条 */
+}
+
+/* 自定义按钮样式 */
+.custom-file-input {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 2rem;
+}
+
+/* 隐藏默认按钮样式 */
+.custom-file-input::-webkit-file-upload-button {
+    display: none;
+}
+
+.mainbox .column-container {
+    height: 11.1875rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url(../images/line.png) rgba(255, 255, 255, 0.04);
+    padding: .1875rem .1875rem;
+    margin-bottom: .1875rem;
+}
+
+.mainbox .weather {
+    height: 10.5875rem;
+}
